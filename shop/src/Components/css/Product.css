@@ -1,0 +1,150 @@
+
+
+
+.addToCartbtn{
+  padding: 0px 30px 0px 30px ;
+  background-color: rgb(255, 145, 0);
+  border: none;
+  border-radius: 50px;
+  font-size: 25px;
+}
+.addToCartbtn:hover {
+  border: 2px solid #4fc08d;
+  background-color: #4fc08d;
+  color: #ffffff;
+}
+
+
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  background: #fff;
+  justify-content: center;
+  gap:20px;
+}
+.lists div {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 0 56px 0;
+ 
+  background: #f5f2f2;
+  gap:10px;
+}
+.lists div:nth-of-type(n+4):not(:nth-of-type(n+24)) {
+  order: 1;
+  
+}
+.lists div:nth-of-type(n+24):not(:nth-of-type(n+44)) {
+  order: 3;
+}
+.lists div:nth-of-type(n+44):not(:nth-of-type(n+64)) {
+  order: 5;
+}
+.lists li:nth-of-type(n+49) {
+  order: 7;
+}
+.lists .ads1, .lists .ads2, .lists .ads3 {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+ 
+  background: #f5f5f5;
+}
+.lists .ads1:before, .lists .ads2:before, .lists .ads3:before, .lists .ads1:after, .lists .ads2:after, .lists .ads3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 240px;
+  background: #f5f5f5;
+  z-index: -1;
+}
+.lists .ads1:before, .lists .ads2:before, .lists .ads3:before {
+  right: 50%;
+}
+.lists .ads1:after, .lists .ads2:after, .lists .ads3:after {
+  left: 50%;
+}
+.lists .ads1 > .ad, .lists .ads2 > .ad, .lists .ads3 > .ad {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.lists .ads1 {
+  order: 2;
+}
+.lists .ads2 {
+  order: 4;
+}
+.lists .ads3 {
+  order: 6;
+}
+.list {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+}
+.inner {
+  height: 100%;
+}
+.inner > p {
+  margin-top: 8px;
+  font-size: 11px;
+}
+.inner p:first-child {
+  height: 200px;
+  margin-top: 0;
+  background: #bebbbb;
+}
+@media screen and (max-width: 1100px) {
+  .lists {
+    max-width: 800px;
+ }
+}
+@media screen and (max-width: 900px) {
+  .lists {
+    max-width: 600px;
+ }
+}
+@media screen and (max-width: 700px) {
+  .lists {
+    max-width: 400px;
+ }
+}
+@media screen and (max-width: 500px) {
+  .header:before, .header:after {
+    width: 10px;
+ }
+  .lists {
+    box-sizing: border-box;
+    padding: 0 10px;
+ }
+  .lists li {
+    box-sizing: border-box;
+    width: 50%;
+    max-width: auto;
+ }
+  .lists .ads1, .lists .ads2, .lists .ads3 {
+    padding: 0;
+    background: none;
+ }
+  .lists .ads1:before, .lists .ads2:before, .lists .ads3:before, .lists .ads1:after, .lists .ads2:after, .lists .ads3:after {
+    display: none;
+ }
+  .lists .ads1 > .ad, .lists .ads2 > .ad, .lists .ads3 > .ad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+ }
+  .lists .ads1 > .ad p, .lists .ads2 > .ad p, .lists .ads3 > .ad p {
+    width: 100%;
+    margin-bottom: 10px;
+ }
+}

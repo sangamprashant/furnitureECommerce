@@ -1,0 +1,9 @@
+
+
+create a file  {.env}  in root and add this code......
+
+JWT_SECRET="dfkcdcvubndcvujncv  <-jwt secret example to genetrate secret let it be random set of string as example"
+
+MONGO_URL="here paste your mongo url"
+
+add:"http://localhost:5000" in fronted to fetch from backend
